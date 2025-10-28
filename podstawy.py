@@ -1,23 +1,45 @@
 # 🧩 1. Funkcje w Pythonie
 # Opis: Funkcje pozwalają na wielokrotne użycie kodu i organizację logiki.
 # Przykład:
+def funkcje_w_pythonie():
+    def greet(name):
+        return f"Hello, {name}!"
+    print(greet("Alice"))  # Output: Hello, Alice!
 
-def greet(name):
-    return f"Hello, {name}!"
-print(greet("Alice"))  # Output: Hello, Alice!
+# funkcje_w_pythonie()
 
 # Ćwiczenia:
 #     Napisz funkcję is_even(n) zwracającą True, jeśli liczba jest parzysta.
-def is_even(n):
-    if n % 2 == 0:
-        return f"Liczba {n} jest parzysta."
-    else:
-        return f"Liczba {n} nie jest parzysta."
-is_even(4)
-is_even(7)
-print("test")
+def parzysta_nieparzysta():
+    def is_even(n):
+        if n % 2 == 0:
+            return f"Liczba {n} jest parzysta."
+        else:
+            return f"Liczba {n} nie jest parzysta."
+    print(is_even(4))
+    print(is_even(7))
+# parzysta_nieparzysta()
 
 #     Stwórz funkcję fibonacci(n) zwracającą n-ty element ciągu Fibonacciego.
+
+def fibonacci(n):
+    if n < 0:
+        raise ValueError("n musi być nieujemne")
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return 1
+
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+# Przykład: wypisz pierwsze 10 wyrazów
+for i in range(10):
+    print(fibonacci(i), end=", ")
+
+
 #     Zrób funkcję calculate_area(shape, **kwargs) obsługującą różne figury (np. koło, prostokąt).
 
 # 🧱 2. Klasy w Pythonie (OOP)
