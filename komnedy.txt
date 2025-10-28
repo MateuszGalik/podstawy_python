@@ -1,0 +1,4 @@
+git status
+git add podstawy.py
+git commit -m "Testowa zmiana"
+git pushs
