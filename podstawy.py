@@ -8,6 +8,15 @@ print(greet("Alice"))  # Output: Hello, Alice!
 
 # Ćwiczenia:
 #     Napisz funkcję is_even(n) zwracającą True, jeśli liczba jest parzysta.
+def is_even(n):
+    if n % 2 == 0:
+        return f"Liczba {n} jest parzysta."
+    else:
+        return f"Liczba {n} nie jest parzysta."
+is_even(4)
+is_even(7)
+print("test")
+
 #     Stwórz funkcję fibonacci(n) zwracającą n-ty element ciągu Fibonacciego.
 #     Zrób funkcję calculate_area(shape, **kwargs) obsługującą różne figury (np. koło, prostokąt).
 
@@ -27,9 +36,7 @@ my_dog.bark()  # Output: Buddy says Woof!
 # Ćwiczenia:
 
 #     Zdefiniuj klasę Car z metodami start(), stop() i atrybutem speed.
-
 #     Stwórz klasę BankAccount z metodami deposit(), withdraw() i balance.
-
 #     Rozszerz klasę Person o dziedziczenie: Student(Person) z dodatkowym polem school.
 
 # 🔁 3. List Comprehensions
