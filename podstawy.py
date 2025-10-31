@@ -209,7 +209,7 @@ def obliczanie_pola():
         print(f"Błąd: Brakujący parametr {ke}")
     
     # print(f"Area of circle without radius: {calculate_area('circle') }")
-obliczanie_pola()
+# obliczanie_pola()
 
 # 🧱 2. Klasy w Pythonie (OOP)
 # Opis: Klasy pozwalają tworzyć obiekty i modelować zachowania.
@@ -243,10 +243,10 @@ def kalasy_w_pythonie():
 # 🔁 3. List Comprehensions
 # Opis: Skrócona składnia do tworzenia list.
 # Przykład:
-
-squares = [x**2 for x in range(10)]
-print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-
+def listy_w_pythonie():
+    squares = [x**2 for x in range(10)]
+    print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+# listy_w_pythonie()
 # Ćwiczenia:
 #     Utwórz listę liczb parzystych od 0 do 20.
 #     Przefiltruj listę imion, zostawiając tylko te zaczynające się na "A".
@@ -255,19 +255,19 @@ print(squares)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 # 🧙 4. Dekoratory
 # Opis: Funkcje modyfikujące inne funkcje — używane np. do logowania, walidacji, cache’owania.
 # Przykład:
+def dekoratory():
+    def logger(func):
+        def wrapper(*args, **kwargs):
+            print(f"Calling {func.__name__}")
+            return func(*args, **kwargs)
+        return wrapper  
 
-def logger(func):
-    def wrapper(*args, **kwargs):
-        print(f"Calling {func.__name__}")
-        return func(*args, **kwargs)
-    return wrapper  
+    @logger
+    def say_hello():
+        print("Hello!") 
 
-@logger
-def say_hello():
-    print("Hello!") 
-
-say_hello()
-
+    say_hello()
+# dekoratory()
 # Ćwiczenia:
 #     Napisz dekorator timer mierzący czas wykonania funkcji.
 #     Stwórz dekorator authenticate sprawdzający, czy użytkownik ma dostęp.
