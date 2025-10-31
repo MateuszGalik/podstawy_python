@@ -148,6 +148,69 @@ def fib_wektorowo():
 # fib_wektorowo()
 #     Zrób funkcję calculate_area(shape, **kwargs) obsługującą różne figury (np. koło, prostokąt).
 
+def obliczanie_pola():
+    
+    import math
+    def calculate_area(shape, **kwargs):
+        shaped = shape.lower()
+        if shaped == "circle":
+            raius = kwargs['radius']
+            area = math.pi * raius ** 2
+            # return math.pi * raius ** 2
+        elif shaped == "rectangle":
+            length = kwargs['length']
+            width = kwargs['width']
+            area = length * width
+            # return length * width
+        elif shaped == "triangle":
+            base = kwargs['base']
+            height = kwargs['height']
+            area = 0.5 * base * height
+            # return 0.5 * base * height
+        elif shaped == "square":
+            side = kwargs['side']
+            area = side ** 2
+            # return side ** 2
+        elif shaped ==  "ellipse":
+            a = kwargs['a']
+            b = kwargs['b']
+            area = math.pi * a * b
+            # return math.pi * a * b
+        elif shaped == "trapezoid":
+            a = kwargs['a']
+            b = kwargs['b']
+            height = kwargs['height']
+            area = 0.5 * (a + b) * height
+            # return 0.5 * (a + b) * height
+        else:
+            raise ValueError(f"Nieznany kształt: {shape}")
+            # return round(area, 2) # wynik zaokraglamy do dwoch miejsc po przecinku
+        return f"{area:.2f}"
+        
+    print(f"Area of circle with radius 5: {calculate_area('circle', radius=5)}") #78.54
+    print(f"Area of rectangle 4x6: {calculate_area('rectangle', length=4, width=6)}") #24.00
+    print(f"Area of triangle base 4 height 5: {calculate_area('triangle', base=4, height=5)}")
+    print(f"Area of square side 4: {calculate_area('square', side=4)}")
+    print(f"Area of ellipse a=3 b=4: {calculate_area('ellipse', a=3, b=4)}")
+    print(f"Area of trapezoid a=3 b=5 height=4: {calculate_area('trapezoid', a=3, b=5, height=4)}")
+    
+    try:
+        print(f"Area of circle without radius: {calculate_area('azbest')}")
+    except ValueError as ve:
+        print(f"Błąd: {ve}")
+    except KeyError as ke:
+        print(f"Błąd: Brakujący parametr {ke}")
+    
+    try:
+        print(f"Area of circle without radius: {calculate_area('circle')}")
+    except ValueError as ve:
+        print(f"Błąd: {ve}")
+    except KeyError as ke:
+        print(f"Błąd: Brakujący parametr {ke}")
+    
+    # print(f"Area of circle without radius: {calculate_area('circle') }")
+obliczanie_pola()
+
 # 🧱 2. Klasy w Pythonie (OOP)
 # Opis: Klasy pozwalają tworzyć obiekty i modelować zachowania.
 # Przykład:
