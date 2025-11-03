@@ -8,3 +8,6 @@ Ciwiczenia i projekty
 
 31.10.2025 Godzina 18:55
 funkcje + KeyError, ValueError
+
+03.11.2025
+Utworzenie kalsy o nazwie Car z medodami start(), stop(), i atrybutem speed, brand, model.
