@@ -237,6 +237,30 @@ def kalasy_w_pythonie():
 
 # Ćwiczenia:
 #     Zdefiniuj klasę Car z metodami start(), stop() i atrybutem speed.
+
+def klasa_samochod():
+    class Car:
+        def __init__(self, brand, model, speed = 0):
+            self.brand = brand
+            self.model = model
+            self.speed = speed
+
+        def start(self):
+            return f"{self.brand} {self.model} started. Speed is {self.speed} km/h."
+
+        def stop(self):
+            self.speed = 0
+            return f"{self.brand} {self.model} stopped. Speed is {self.speed} km/h."
+
+    my_car = Car("Toyota", "Corolla", speed = 60)
+    print(my_car.start())
+    print(my_car.stop())
+    
+    my_car_2 = Car("Ferarri", "F40", 150)
+    print(my_car_2.start())
+    print(my_car_2.stop())
+    
+klasa_samochod()
 #     Stwórz klasę BankAccount z metodami deposit(), withdraw() i balance.
 #     Rozszerz klasę Person o dziedziczenie: Student(Person) z dodatkowym polem school.
 
